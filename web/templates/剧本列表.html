@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../static/css/common.css?t=12" rel="stylesheet" /> 
+
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+            <div class="object">
+                <b>TMZ</b>
+                <a>切换项目</a>
+            </div>
+            <div class="menu-container">
+                <div id="menu" class="select">
+                    <p>剧本拆分列表</p>
+                    <div>
+                        <a>预算</a>
+                        <a>日历</a>
+                        <a>进度</a>
+                        <a>项目管理</a>
+                        <a>用户管理</a>
+                        <a>表格管理</a>
+                    </div>
+                </div>
+                <div class="msg">
+                    <a id="msg"><i>0</i></a>
+                    <div>
+                        <span id="close-msg"></span>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                    </div>
+                </div>
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="scriptlist-box boxsizing">
+                <div class="scriptlist-form-container scriptlist-mg">
+                    <span>集：</span>
+                    <input type="text" name="name" value="" class="form-control input-min" />
+                    <span>版本：</span>
+                    <input type="text" name="name" value="" class="form-control input-min" />
+                    <span>状态：</span>
+                    <select class="form-control">
+                        <option value="value">启用</option>
+                    </select>
+                    <button class="btn lans">搜索</button>
+                    <button class="btn lans">重置</button>
+                </div>
+                <div class="scriptlist-form-container">
+                    <p><b>当前剧本：</b></p>
+                    <table cellpadding='0' cellspacing='0' border='0' id="dataCrruntScript">
+                        <tr>
+                            <td><span>集数</span></td>
+                            <td>编号</td>
+                            <td>剧本名称</td>
+                            <td>版本</td>
+          
+                        </tr>
+                        <tr>
+                            <td><span class="js-sEpisodes">60</td>
+                            <td><span class="js-sNo">00001</td>
+                            <td><span class="js-sName">STM剧本-22222</td>
+                            <td><span class="js-sVersion"s>Eq60</td>
+               
+                        </tr>
+                    </table>
+                </div>
+                <div class="data-container">
+                    <table cellpadding='0' cellspacing='0' border='0' class="tb-head" >
+                        <tr>
+                            <td style="width:70px;">集</td>
+                            <td style="width:10%">编号</td>
+                            <td style="width:15%">剧本名称</td>
+                            <td style="width:15%">版本</td>
+                            <td>操作</td>
+                            <td style="width:15%">状态</td>
+                            <td style="width:10%">下载剧本</td>
+                            <td style="width:20px"></td>
+                        </tr>
+                    </table>
+                    <div class="scroll">
+                        <table cellpadding='0' cellspacing='0' border='0' class="tb-body" id="dataScriptList">
+                            <tr>
+                                <td style="width:70px"><span class="new js-sEpisodes">60</span></td>
+                                <td style="width:10%" class="js-sNo">000062</td>
+                                <td style="width:15%" class="js-sName">STM剧本—123123123123</td>
+                                <td style="width:15%" class="js-sVersions">阿斯顿发斯蒂芬</td>
+                                <td>
+                                    <button class="btn ls">标准化</button>
+                                    <button class="btn cs">拆分</button>
+                                    <button class="btn lans">关联比对</button>
+                                </td>
+                                <td style="width:15%" class="js-sState">
+                                    <label class="radio"><input type="radio" name="name" value="" checked="checked" />启用</label>
+                                    <label class="radio"><input type="radio" name="name" value="" />不启用</label>
+                                </td>
+                                <td style="width:10%"><button class="btn hs">下载剧本</button></td> 
+                            </tr> 
+                            <tr>
+                               <td style="width:70px"><span class="new js-sEpisodes">60</span></td>
+                                <td style="width:10%" class="js-sNo">111</td>
+                                <td style="width:15%" class="js-sName">JHJJM剧本23123</td>
+                                <td style="width:15%" class="js-sVersions">阿=斯蒂芬</td>
+                                <td>
+                                    <button class="btn ls">标准化</button>
+                                    <button class="btn cs">拆分</button>
+                                    <button class="btn lans">关联比对</button>
+                                </td>
+                                <td style="width:15%" class="js-sState">
+                                    <label class="radio"><input type="radio" name="name" value="" checked="checked" />启用</label>
+                                    <label class="radio"><input type="radio" name="name" value="" />不启用</label>
+                                </td>
+                                <td style="width:10%"><button class="btn hs">下载剧本</button></td> 
+                            </tr> 
+                            <tr>
+                                <td style="width:70px"><span class="new js-sEpisodes">60</span></td>
+                                <td style="width:10%" class="js-sNo">0000358</td>
+                                <td style="width:15%" class="js-sName">KKU剧本LKJ</td>
+                                <td style="width:15%" class="js-sVersions">122</td>
+                                <td>
+                                    <button class="btn ls">标准化</button>
+                                    <button class="btn cs">拆分</button>
+                                    <button class="btn lans">关联比对</button>
+                                </td>
+                                <td style="width:15%" class="js-sState">
+                                    <label class="radio"><input type="radio" name="name" value="" checked="checked" />启用</label>
+                                    <label class="radio"><input type="radio" name="name" value="" />不启用</label>
+                                </td>
+                                <td style="width:10%"><button class="btn hs">下载剧本</button></td> 
+                            </tr> 
+                           
+                        </table>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+        <div id="footer">© Copyright 2017 首汇焦点</div>
+    </div>
+    <script src="../static/js/jquery-2.1.0.min.js"></script>
+    <script src="../static/js/main.js"></script> 
+    <script src="../static/js/common.js"></script> 
+    <script type="text/javascript">
+    $(function(){
+
+      $("#dataScriptList tr").lineFocus({
+            trHoverClass:"hoverSty",
+            showContent:"#dataCrruntScript",
+            field:".js-sEpisodes,.js-sNo,.js-sName,.js-sVersions,.js-sState",
+      }); 
+
+    });  
+
+        
+    </script>
+</body>
+</html>
