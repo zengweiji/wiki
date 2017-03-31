@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../static/css/common.css?t=12" rel="stylesheet" /> 
+    <link href="../static/css/main.css" rel="stylesheet" /> 
+
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+
+            <div class="menu-container">
+              
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+			 <div class="scriptlist-form-container">
+                            <strong>截屏分组图片列表</strong>
+                     
+             </div>
+            <div class="main">
+
+                    <div class="left">
+                        
+                        <div class="creat-grouping-f">
+                            <label>
+                                <span>项目：</span>
+                                <select class="form-control">
+                                    <option value="value">A</option>
+                                    <option value="value">B</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>级：</span>
+                                <select class="form-control">
+                                    <option value="value">A</option>
+                                    <option value="value">B</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>文件名称：</span>
+                                <input type="text" name="name" value="" class="form-control">
+                                <button class="btn lans">搜索</button>
+                            </label>
+                            <label>
+                                <span>分组：</span>
+                                <select class="form-control">
+                                    <option value="value">A</option>
+                                    <option value="value">B</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>标签：</span>
+                                
+                                <input type="text" name="name" value="" class="form-control">
+                                <a class="add"></a>
+                                <button class="btn lans">保存</button>
+                            </label>
+                        </div>
+
+                        <div class="grouping-box">
+                            <div class="grouping-box-item">
+                                <p><strong class="group-sort inlineblock">A组</strong> <span class="group-name inlineblock">哺乳动物</span> <input type="checkbox" name="" class="inlineblock">全选
+                                </p>
+
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>                                 
+                                </dl>
+
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>                                 
+                                </dl>
+
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                
+                            </div>
+                            <div class="grouping-box-item">
+                                <p><strong class="group-sort inlineblock">B组</strong> <span class="group-name inlineblock">哺乳动物</span> <input type="checkbox" name="" class="inlineblock">全选</p>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div id="addinfo" class="right">
+                 
+                            <div class="screenshot">
+                                <img id="screenshot" src="../static/img/jt.png">
+                                <input type="hidden" id="ShotTime" name="ShotTime">
+                                <input type="hidden" id="Image" name="Image">
+                                <input type="hidden" id="Assets" name="Assets">
+                                <input type="hidden" id="VFXRequirements" name="VFXRequirements">
+                            </div>
+                            <div class="imginfo">
+                                <span>集：</span>
+                                <input type="text" class="form-control txt" id="Spisode" name="Spisode">
+                                <span>场数：</span>
+                                <input type="text" class="form-control txt" id="SeqNo" name="SeqNo">
+                                <span>镜头号：</span>
+                                <input type="text" class="form-control txt" id="ShotCodeSOOVII" name="ShotCodeSOOVII" value="0010">
+                            </div>
+                            <div class="imginfo">
+                                <span>媒体编号：</span>
+                                <input type="text" class="form-control txt" id="ShotCodeClient" name="ShotCodeClient">
+                                <span class="ml10">帧数：</span>
+                                <input type="text" class="form-control txt" id="CurrentFrame" name="CurrentFrame">
+                            </div>
+                            <div class="imginfo">
+                                <span>景别：</span>
+                                <select class="form-control" id="ShootingScale" name="ShootingScale">
+                                    <option value="中景">中景</option>
+                                    <option value="近景">近景</option>
+                                    <option value="远景">远景</option>
+                                    <option value="特写">特写</option>
+                                    <option value="全景">全景</option>
+                                    <option value="中远景">中远景</option>
+                                    <option value="中近景">中近景</option>
+                                    <option value="大特写">大特写</option>
+                                </select>
+                                <span class="ml10">镜头运动：</span>
+                                <select class="form-control" id="CameraMove" name="CameraMove">
+                                    <option value="定">定</option>
+                                    <option value="推">推</option>
+                                    <option value="拉">拉</option>
+                                    <option value="摇">摇</option>
+                                    <option value="移">移</option>
+                                    <option value="跟">跟</option>
+                                    <option value="手持">手持</option>
+                                </select>
+                            </div>
+                            <div class="imginfo">
+                                <span>镜头难度：</span>
+                                <select class="form-control" id="Difficulty" name="Difficulty">
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                </select>
+                                <span class="ml10">镜头优先级：</span>
+                                <select class="form-control" id="Priority" name="Priority">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="imginfo">
+                                <span>镜头描述：</span>
+                                <input type="text" name="Description" class="form-control txt-max" id="Description">
+                            </div>
+							<div class="imginfo">
+                                <p>镜头描述：</p>
+                                <textarea  rows="2" class="txt-textarea">D：特效名称1；C：特效名称2</textarea>
+                            </div>
+                            <div id="assetsInfo" class="assetsInfo">
+                                <div id="assetsInfoList"><a>工地？</a><a>伤口？</a><a>南诏地宫</a></div>
+								
+                                <p class="base"><span>特效类型：</span><select class="form-control"><option value="">请选择</option><option value="Assets">Assets</option><option value="DMP">DMP</option><option value="Matchmove/ Track">Matchmove/Track</option><option value="Anim">Anim</option><option value="Light">Light</option><option value="Hair">Hair</option><option value="MG">MG</option><option value="FX">FX</option><option value="Roto">Roto</option><option value="Paint">Paint</option><option value="Comp">Comp</option></select><span>名称：</span><input type="text" class="form-control"><a class="add"></a></p>
+              </div>
+                            <div class="imginfo" style="margin-top:10px;text-align:center;">
+                                <a class="btncommon lan" id="btnsave">保存</a>
+                                <a class="btncommon lan" id="btncancel">取消</a>
+                            </div>
+                     
+                    </div>
+                </div>
+        </div>
+        <div id="footer">© Copyright 2017 首汇焦点</div>
+    </div>
+    <script src="../static/js/jquery-2.1.0.min.js"></script>
+    <script src="../static/js/main.js"></script> 
+    <script src="../static/js/common.js"></script> 
+
+</body>
+</html>

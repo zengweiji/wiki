@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" /> 
+    <link href="../static/css/common.css?t=1" rel="stylesheet" />
+    <script src="../static/js/jquery-2.1.0.min.js"></script>
+    <script src="../static/js/main.js"></script>
+    <style>
+        .item{width:100%;height:30px; font-size:14px; vertical-align:middle; display:table; height:30px;}
+        .item .filename{display:inline-block; line-height:30px;}
+        .item .loading{display:inline-block;vertical-align:top;}
+        .item .loading div{width:200px;border:1px solid #dddcdc; margin-top:10px; padding:1px; height:8px;  border-radius:5px;display:inline-block;}
+        .item .loading p{width:0px;height:8px;border-radius:5px; background:#41D041;transition:all .6s ease;} 
+        .item .tips{display:inline-block;}
+        .item .tips{font-size:10px;font-family:Arial;} 
+    </style>
+    <script> 
+         
+        var oldUpload = [];
+        var thisUpload = [];
+        function checkFile(name) {
+            for (var i = 0; i < oldUpload.length; i++) {
+                if (oldUpload[i].name == name) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        function fileSelected() {
+            var files = document.getElementById("fileToUpload").files;
+            var html = "";
+            var file = null;
+            var fileSize = 0;
+            var uploadFileSize = 0;
+            for (var i = 0; i < files.length; i++) {
+                file = files[i];
+                if (!checkFile(file.name)) {
+                    if (file.size > 1024 * 1024) {
+                        fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + ' MB';
+                        uploadFileSize = "0 MB";
+                    }
+                    else {
+                        fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + ' KB';
+                        uploadFileSize = "0 KB";
+                    }
+                    html += "<div class=\"item\" id=\"fileItem" + oldUpload.length + "\">";
+                    html += "<div class=\"filename\">" + file.name + "</div>";
+                    html += "<div class=\"loading\"><div><p id='progressWidth" + oldUpload.length + "'></p></div></div>";
+                    html += "<div id='progressNumber" + oldUpload.length + "' class='tips'>(" + fileSize + "/" + uploadFileSize + ") 0%</div>";
+                    html += "</div>";
+                    thisUpload.push({ file: file, name: file.name, size: fileSize });
+                    oldUpload.push({ file: file, name: file.name, size: fileSize });
+                }
+                //else {
+                //    alert("文件名："+file.name+" 存在  列表，已被过滤！")
+                //} 
+            }
+            if (thisUpload.length == 0) {
+                return false;
+            }
+          
+            document.getElementById("fileList").innerHTML = html;
+
+           
+            for (var i = 0; i < thisUpload.length; i++) {
+                (function (file) {
+                    var fd = new FormData();
+                    var xhr = new XMLHttpRequest();
+                    fd.append("fileToUpload", file);
+                    xhr.upload.addEventListener("progress", function (evt) {
+                        var id = getObj(file.name);
+                        if (evt.lengthComputable) {
+                            var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+
+                            var fileSize = "";
+                            if (evt.total > 1024 * 1024) {
+                                fileSize = (Math.round(evt.total * 100 / (1024 * 1024)) / 100).toString() + ' MB';
+                            }
+                            else {
+                                fileSize = (Math.round(evt.total * 100 / 1024) / 100).toString() + ' KB';
+                            }
+                            var uploadfileSize = "";
+                            if (evt.loaded > 1024 * 1024) {
+                                uploadfileSize = (Math.round(evt.loaded * 100 / (1024 * 1024)) / 100).toString() + ' MB';
+                            }
+                            else {
+                                uploadfileSize = (Math.round(evt.loaded * 100 / 1024) / 100).toString() + ' KB';
+                            }
+
+                            document.getElementById('progressWidth' + id).style.width = (percentComplete * 2) + "px";
+                            document.getElementById('progressNumber' + id).innerHTML = "(" + fileSize + "/" + uploadfileSize + ") " + percentComplete.toString() + '%';
+                        }
+                    }, false);
+                    xhr.addEventListener("load", function (evt) {
+                        var id = getObj(file.name);
+                        var model = JSON.parse(evt.target.responseText);
+                    }, false);
+                    xhr.addEventListener("error", function () {
+
+                    }, false);
+                    xhr.addEventListener("abort", function () {
+
+                    }, false);
+                    xhr.open("POST", "/Upload/Index");
+                    xhr.send(fd);
+                })(thisUpload[i].file);
+            }
+            thisUpload = [];
+        }
+
+        function getObj(fileName) {
+            for (var i = 0; i < oldUpload.length; i++) {
+                if (oldUpload[i].name == fileName) {
+                    return i;
+                }
+            }
+            return 0;
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+            <div class="object">
+                <b>TMZ</b>
+                <a>切换项目</a>
+            </div>
+            <div class="menu-container">
+                <div id="menu" class="select">
+                    <p>剧本拆分列表</p>
+                    <div>
+                        <a>预算</a>
+                        <a>日历</a>
+                        <a>进度</a>
+                        <a>项目管理</a>
+                        <a>用户管理</a>
+                        <a>表格管理</a>
+                    </div>
+                </div>
+                <div class="msg">
+                    <a id="msg"><i>0</i></a>
+                    <div>
+                        <span id="close-msg"></span>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                        <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                    </div>
+                </div>
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="upload-box boxsizing">
+                <div class="upload-menu">
+                    <a class="script"><span><img src="../static/img/upload/icon-jubenshangchuan.png" /></span><p>剧本上传</p></a>
+                    <a class="img"><span><img src="../static/img/upload/icon-zhaopian.png" /></span><p>现场看景照片</p></a>
+                    <a class="map"><span><img src="../static/img/upload/icon-ditu.png" /></span><p>地图文件</p></a>
+                </div>
+                <div class="upload-form-container">
+                    <button class="btn ls">删除所选</button>
+                    <select class="form-control">
+                        <option value="value">TMZ</option>
+                    </select>
+                    <select class="form-control">
+                        <option value="value">TMZ</option>
+                    </select>
+                    <a href="javascript:;" class="btn cs upload">
+                        上传剧本
+                        <input type="file" id="fileToUpload" name="fileToUpload" onchange="fileSelected()" accept=".docx" />
+                    </a>
+                    <div id="fileList" style="display:inline-block;"></div>
+                </div>
+                <div class="data-container">
+                    <table cellpadding='0' cellspacing='0' border='0' class="tb-head">
+                        <tr>
+                            <td style="width:5%"></td>
+                            <td style="width:5%">集</td>
+                            <td style="width:15%">编号</td>
+                            <td>剧本名称</td>
+                            <td style="width:15%">更新时间</td>
+                            <td style="width:15%">执行人</td>
+                            <td style="width:15%">备注</td> 
+                            <td style="width:20px"></td>
+                        </tr>
+                    </table>
+                    <div class="scroll">
+                        <table cellpadding='0' cellspacing='0' border='0' class="tb-body">
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td> 
+                            </tr>
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td> 
+                            </tr> 
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr> 
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr> 
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr> 
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr> 
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td style="width:5%"><input type="checkbox" name="name" value="" /></td>
+                                <td style="width:5%">01</td>
+                                <td style="width:15%">0001</td>
+                                <td>STM剧本-201600001</td>
+                                <td style="width:15%">2016-01-01 00:00:00</td>
+                                <td style="width:15%">xXX</td>
+                                <td style="width:15%">asdfasdf</td>
+                            </tr> 
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div id="footer">© Copyright 2017 首汇焦点</div>
+    </div>
+
+</body>
+</html>

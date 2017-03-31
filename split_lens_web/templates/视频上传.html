@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../static/css/common.css?t=12" rel="stylesheet" /> 
+
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+
+            <div class="menu-container">
+              
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="scriptlist-box boxsizing">
+                <div class="scriptlist-form-container scriptlist-mg">
+				 	<span>项目：</span>
+                    <select class="form-control">
+                        <option value="">ZZT</option>
+                        <option value="">LLB</option>
+                        <option value="">XYJ</option>
+
+                	</select>
+					
+                    <span>集：</span>
+                    <select class="form-control">
+                        <option value="">Ep001</option>
+                        <option value="">Ep002</option>
+                        <option value="">Ep003</option>
+                	</select>
+					
+                    <span>场：</span>
+                    <select class="form-control">
+                        <option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+                    </select>
+					<span>类别：</span>
+                    <select class="form-control">
+                        <option value="">电视剧</option>
+						<option value="">电影</option>
+                    </select>
+					
+                    <button class="btn ls">添加文件</button>
+                    <input type="text" name="name" value="" class="form-control" style="height:28px;">
+					<button class="btn lans">搜索</button>
+                </div>
+                <div class="data-container">
+                    <table cellpadding='0' cellspacing='0' border='0' class="tb-head" >
+                        <tr>
+                            <td style="width:70px;">序号</td>
+                            <td style="width:10%">视频名称</td>
+                            <td style="width:15%">上传时间</td>
+                            <td>上传进度</td>
+                            <td style="width:15%">关键帧</td>
+                            <td style="width:15%">操作</td>
+                        </tr>
+                    </table>
+                    <div class="scroll">
+                        <table cellpadding='0' cellspacing='0' border='0' class="tb-body" id="dataScriptList">
+                            <tr>
+                                <td style="width:70px">1</td>
+                                <td style="width:10%" class="js-sNo">TMZ_01.mov</td>
+                                <td style="width:15%" class="js-sName">2017-3-4 14:00 </td>
+                                <td>
+									<div class="graph"><span class="green" style="width:90%;"></span></div>
+									<label class="graph-info"><span>（400KB/755KB）</span><i>90%</i></label>
+								</td>
+                                <td  style="width:15%">
+                                    <button class="btn hs">否</button>
+                                    </td>
+                                <td style="width:15%">
+                                    <a href="javascript:;" class="videobtn_tool"><span class="btn_play"></span><span>播放</span></a>
+                                    <a href="javascript:;" class="videobtn_tool"><span class="btn_del"></span><span>删除</span></a>
+                                </td>
+                            </tr> 
+                            <tr>
+                               <td style="width:70px">2</td>
+                                <td style="width:10%" class="js-sNo">TMZ_02.mov</td>
+                                <td style="width:15%" class="js-sName">2017-3-4 14:00 </td>
+                                <td>
+									<div class="graph"><span class="green" style="width:100%;"></span></div>
+									<label class="graph-info"><span>（400KB/755KB）</span><i>100%</i></label>
+								</td>
+                                <td style="width:15%">
+                                    <button class="btn ls">是</button>
+                                    </td>
+                                <td style="width:15%" class="js-sState">
+                                    <a href="javascript:;" class="videobtn_tool"><span class="btn_play"></span><span>播放</span></a>
+                                    <a href="javascript:;" class="videobtn_tool"><span class="btn_del"></span><span>删除</span></a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td style="width:70px">3</td>
+                                <td style="width:10%" class="js-sNo">TMZ_03.mov</td>
+                                <td style="width:15%" class="js-sName">2017-3-4 14:00 </td>
+                                <td>
+									<div class="graph"><span class="green" style="width:50%;"></span></div>
+									<label class="graph-info"><span>（400KB/755KB）</span><i>50%</i></label>
+								</td>
+                                <td style="width:15%" >
+                                    <button class="btn ls">是</button>
+                                    </td>
+                                <td style="width:15%" class="js-sState">
+                                     <a href="javascript:;" class="videobtn_tool"><span class="btn_play"></span><span>播放</span></a>
+                                    <a href="javascript:;" class="videobtn_tool"><span class="btn_del"></span><span>删除</span></a>
+                                </td>
+                            </tr> 
+                           
+                        </table>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+        <div id="footer">© Copyright 2017 首汇焦点</div>
+    </div>
+    <script src="../static/js/jquery-2.1.0.min.js"></script>
+    <script src="../static/js/main.js"></script> 
+    <script src="../static/js/common.js"></script> 
+
+</body>
+</html>

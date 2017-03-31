@@ -92,33 +92,33 @@ button, input, select, textarea {font-size: 100%;outline: none !important;}
 .login button:active{background:#398439;border:1px solid #255625;}
 
 /*top*/
-.logo{float:left;width:280px;height:70px;background:url(/static/img/icon.png) no-repeat 0px 7px;margin-left:10px;}
+.logo{float:left;width:280px;height:70px;background:url(../img/icon.png) no-repeat 0px 7px;margin-left:10px;}
 .object{float:left;margin-top:25px;color:#FFF;}
 .object b{font-size:18px;margin:0px 20px;}
 .object a{color:#FFF;}
 .object a:hover{color:yellow;text-decoration: underline;}
-.object a:before{content:"";display:inline-block;width:16px;height:16px;background:url(/static/img/index/icon-qiehuan.png) no-repeat;margin-right:6px; position:relative;top:3px;}
+.object a:before{content:"";display:inline-block;width:16px;height:16px;background:url(../img/index/icon-qiehuan.png) no-repeat;margin-right:6px; position:relative;top:3px;}
 .menu-container{height:80px;float:right;margin-right:5px;color:#FFF;}
 
 .select{width:200px;position:relative;display:inline-block; margin-top:20px;}
 .select p{height:37px; text-align:center; line-height:37px; font-size:16px; border:2px solid #535353;display:block;cursor:pointer;}
-.select p::after{content:"";display:inline-block;width:16px;height:10px;background:url(/static/img/index/icon-tag.png) no-repeat;float:right;margin:15px 10px 0px 0px;}
+.select p::after{content:"";display:inline-block;width:16px;height:10px;background:url(../img/index/icon-tag.png) no-repeat;float:right;margin:15px 10px 0px 0px;}
 .select div{display:none;width:200px;position:absolute;background:#3B3B3B;box-shadow:0px 2px 3px rgba(0,0,0,.5);}
 .select div a{display:block; font-size:16px; text-indent:15px;padding:5px 0px; color:#FFF; }
 .select div a:hover{background:#FFF;color:#000;}
 
 .msg{position:relative;width:100px;display:inline-block;}
-.msg a{position:relative;display:block; margin:0 auto; width:20px;height:18px;background:url(/static/img/index/icon-xinxi.png) no-repeat;}
+.msg a{position:relative;display:block; margin:0 auto; width:20px;height:18px;background:url(../img/index/icon-xinxi.png) no-repeat;}
 .msg i{position:absolute;top:-10px;right:-8px;background:red;border-radius:3px;height:16px; line-height:16px; padding:0px 2px;font-style:normal;}
 .msg div{display:none;position:absolute;background:#FFF;border-radius:5px;width:370px;right:0px;box-shadow:0px 2px 3px rgba(0,0,0,.5);}
-.msg span{width:15px;height:16px;display:inline-block;background:url(/static/img/index/icon-close-msg.png);position:relative;right:-350px;top:5px;cursor:pointer;}
+.msg span{width:15px;height:16px;display:inline-block;background:url(../img/index/icon-close-msg.png);position:relative;right:-350px;top:5px;cursor:pointer;}
 .msg p{padding:0px 5px 5px 5px;overflow:hidden;color:#000;}
 
 .user{display:inline-block; line-height:20px;}
-.user span:before{content:"";width:20px;height:20px;display:inline-block;background:url(/static/img/index/icon-geren.png) no-repeat;margin-right:5px;}
+.user span:before{content:"";width:20px;height:20px;display:inline-block;background:url(../img/index/icon-geren.png) no-repeat;margin-right:5px; margin-top: 20px;}
 
-.setting{position:relative;display:inline-block; margin-left:40px; }
-.setting span{display:block;width:20px;height:20px;background:url(/static/img/index/icon-shezhi.png) no-repeat;cursor:pointer;}
+.setting{position:relative;display:inline-block; margin-left: 10px; margin-right: 60px; vertical-align: middle; }
+.setting span{display:block;width:20px;height:20px;background:url(../img/index/icon-shezhi.png) no-repeat;cursor:pointer;}
 .setting div{display:none;position:absolute; overflow:hidden; background:#FFF; border-radius:5px;width:90px;right:-3px;box-shadow:0px 2px 3px rgba(0,0,0,.5);}
 .setting a{display:block;color:#000; text-indent:15px;padding:5px 0px; }
 .setting a:hover{background:#E0E0E0;}
@@ -159,7 +159,7 @@ button, input, select, textarea {font-size: 100%;outline: none !important;}
 .upload-form-container select{vertical-align:top;width:100px;height:28px;margin-top:2px;margin-left:10px;}
 .upload {position: relative; overflow:hidden;margin-top:2px;margin-left:30px;}
 .upload  input {position: absolute;font-size: 100px;right: 0; top: 0;opacity: 0; filter: alpha(opacity=0);cursor: pointer}
-.upload:before{content:"";display:inline-block;width:16px;height:16px;background:url(/static/img/upload/icon-shangchuanjuben.png)}
+.upload:before{content:"";display:inline-block;width:16px;height:16px;background:url(../img/upload/icon-shangchuanjuben.png)}
 
 .uploaditem{width:100%;height:30px; font-size:14px; vertical-align:middle; display:table; height:30px;}
 .uploaditem .filename{display:inline-block; line-height:30px;}
@@ -478,3 +478,29 @@ ul.split-tab-wrap li.current{ border-bottom: 1px solid #000; }
 .redfont{color: red;}
 .user-power-wrap{padding: 8px; text-align: left;}
 .user-power-item{ padding-right: 15px; }
+
+
+/*视频拆分工具*/
+.btn_play{ background: url(../img/video-toolico.png) no-repeat 0 -17px; width: 18px;height: 18px; background-size: 18px auto; }
+.btn_del{ background: url(../img/video-toolico.png) no-repeat 0 1px; width: 18px;height: 18px; background-size: 18px auto; }
+a.videobtn_tool{  padding: 0 5px; color: #000;}
+a.videobtn_tool span{display: inline-block; vertical-align: middle; padding-right: 5px;}
+
+#graphbox{
+border:1px solid #e7e7e7;
+padding:10px;
+width:250px;
+background-color:#f8f8f8;
+margin:5px 0;
+}
+#graphbox h2{
+color:#666666;
+font-family:Arial;
+font-size:18px;
+font-weight:700;
+}
+.graph{position:relative;background-color:#F0EFEF;border:1px solid #999;padding:2px;font-size:13px;font-weight:700;width: 120px;border-radius: 8px;display: inline-block;vertical-align: middle;}
+.green{position:relative;text-align:left;color:#ffffff;height:8px;line-height:8px;font-family:Arial;display:block;}
+
+.graph .green{background-color:#66CC33; border-radius: 6px;}
+.graph-info{ display: inline-block;vertical-align: middle; }
