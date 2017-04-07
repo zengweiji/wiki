@@ -33,7 +33,7 @@
              </div>
             <div class="main">
 
-                    <div class="left">
+                    <div class="left" id="panelLeft">
                         
                         <div class="creat-grouping-f">
                             <label>
@@ -72,64 +72,70 @@
                         </div>
 
                         <div class="grouping-box">
-                            <div class="grouping-box-item">
-                                <p><strong class="group-sort inlineblock">A组</strong> <span class="group-name inlineblock">哺乳动物</span> <input type="checkbox" name="" class="inlineblock">全选
+                            <div class="grouping-box-item ungroup">
+                                <p><strong class="group-sort inlineblock"><span class="g-fliename">TMZ_01_05_0010.mov</span>等共  <span>50<span>  个文件</strong>
+
+                                    <input type="checkbox" name="" class="inlineblock" data-check-target=".id-checkbox"  onclick="selectAll(this)">全选
+                                    <a herf="javascript:;" class="btn-del-group">删除</a>
                                 </p>
 
                                 <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>                                 
+                                </dl>
+
+                                <dl class="screenshot-item"> 
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
                                    <dd><span><img src="../static/img/jt.png"></span></dd>                                 
                                 </dl>
 
                                 <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
-                                   <dd><span><img src="../static/img/jt.png"></span></dd>                                 
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                 <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
+                                </dl>
+                                 <dl class="screenshot-item">
+                                   <dt><input type="checkbox" name="" class="inlineblock id-checkbox"><span class="item-name">0010A001</span></dt>
+                                   <dd><span><img src="../static/img/jt.png"></span></dd>
+                                 
                                 </dl>
 
-                                <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
-                                   <dd><span><img src="../static/img/jt.png"></span></dd>
-                                 
-                                </dl>
-                                <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
-                                   <dd><span><img src="../static/img/jt.png"></span></dd>
-                                 
-                                </dl>
-                                <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
-                                   <dd><span><img src="../static/img/jt.png"></span></dd>
-                                 
-                                </dl>
-                                <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
-                                   <dd><span><img src="../static/img/jt.png"></span></dd>
-                                 
-                                </dl>
-                                
                             </div>
-                            <div class="grouping-box-item">
-                                <p><strong class="group-sort inlineblock">B组</strong> <span class="group-name inlineblock">哺乳动物</span> <input type="checkbox" name="" class="inlineblock">全选</p>
-                                <dl class="screenshot-item">
-                                   <dt><input type="checkbox" name="" class="inlineblock"><span class="item-name">0010A001</span></dt>
-                                   <dd><span><img src="../static/img/jt.png"></span></dd>
-                                 
-                                </dl>
-                            </div>
+                           
 
                         </div>
 
-
                     </div>
-                    <div id="addinfo" class="right">
+                    
+                    <div id="panelSwitch"><span class="bar-panel">收缩</span></div>
+
+                    <div id="panelRight" class="right">
                  
                             <div class="screenshot">
                                 <img id="screenshot" src="../static/img/jt.png">
-                                <input type="hidden" id="ShotTime" name="ShotTime">
-                                <input type="hidden" id="Image" name="Image">
-                                <input type="hidden" id="Assets" name="Assets">
-                                <input type="hidden" id="VFXRequirements" name="VFXRequirements">
+
                             </div>
+
                             <div class="imginfo">
                                 <span>集：</span>
                                 <input type="text" class="form-control txt" id="Spisode" name="Spisode">
@@ -193,9 +199,11 @@
                                 <textarea  rows="2" class="txt-textarea">D：特效名称1；C：特效名称2</textarea>
                             </div>
                             <div id="assetsInfo" class="assetsInfo">
-                                <div id="assetsInfoList"><a>工地？</a><a>伤口？</a><a>南诏地宫</a></div>
-								
-                                <p class="base"><span>特效类型：</span><select class="form-control"><option value="">请选择</option><option value="Assets">Assets</option><option value="DMP">DMP</option><option value="Matchmove/ Track">Matchmove/Track</option><option value="Anim">Anim</option><option value="Light">Light</option><option value="Hair">Hair</option><option value="MG">MG</option><option value="FX">FX</option><option value="Roto">Roto</option><option value="Paint">Paint</option><option value="Comp">Comp</option></select><span>名称：</span><input type="text" class="form-control"><a class="add"></a></p>
+                                <div id="assetsInfoList"><a>工地？</a><a>伤口？</a><a>南诏地宫</a></div>							
+                                <p class="base"><span>特效类型：</span><select class="form-control"><option value="">请选择</option><option value="Assets">Assets</option><option value="DMP">DMP</option><option value="Matchmove/ Track">Matchmove/Track</option><option value="Anim">Anim</option><option value="Light">Light</option><option value="Hair">Hair</option><option value="MG">MG</option><option value="FX">FX</option><option value="Roto">Roto</option><option value="Paint">Paint</option><option value="Comp">Comp</option></select><span>名称：</span><input type="text" class="form-control">
+                                <span>难度：</span><select class="form-control"><option value="">请选择</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select><span>Manday:</span><input type="text" class="form-control">
+                                <a class="add"></a>
+                                </p>
               </div>
                             <div class="imginfo" style="margin-top:10px;text-align:center;">
                                 <a class="btncommon lan" id="btnsave">保存</a>
@@ -210,6 +218,49 @@
     <script src="../static/js/jquery-2.1.0.min.js"></script>
     <script src="../static/js/main.js"></script> 
     <script src="../static/js/common.js"></script> 
+    <script type="text/javascript">
+   
+
+
+   $(function(){
+
+        //折叠面板
+        $("#panelSwitch").on("click",function(){
+
+            var $left = $("#panelLeft");
+            var $right = $("#panelRight");
+
+                if($right .css("display")=="none"){
+
+                   $right.show();
+                   $(".main").removeClass("active");
+                }else{
+
+                    $right.hide();
+                    $(".main").addClass("active");
+                }                             
+        })
+
+        $(document).on('click', '#assetsInfo p a', function () {
+              var a=$(this); 
+                if (a.attr("class")=="add") {
+                    a.hide();
+                    var str="<p><span>特效类型：</span><select class='form-control'><option value=\"\">请选择</option><option value=\"Assets\">Assets</option><option value=\"DMP\">DMP</option><option value=\"Matchmove/Track\">Matchmove/Track</option><option value=\"Anim\">Anim</option><option value=\"Light\">Light</option><option value=\"Hair\">Hair</option><option value=\"MG\">MG</option><option value=\"FX\">FX</option><option value=\"Roto\">Roto</option><option value=\"Paint\">Paint</option><option value=\"Comp\">Comp</option></select><span>名称：</span><input type=\"text\" class='form-control'><span>难度：</span><select class='form-control'><option value=\"\">请选择</option><option value=\"A\">A</option><option value=\"B\">B</option><option value=\"C\">C</option><option value=\"D\">D</option><option value=\"E\">E</option></select><span>Manday:</span><input type=\"text\" class='form-control'><a class=\"add\"></a><a class=\"del\"></a></p>";
+                    $("#assetsInfo").append(str);
+                }else { 
+                    var p= a.parent();
+                    if (p.next().length==0) {
+                        p.prev().find("a").show();
+                    }
+                    p.remove();
+                } 
+                
+            })
+
+
+　　});
+      
+    </script>
 
 </body>
 </html>

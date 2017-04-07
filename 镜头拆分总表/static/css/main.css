@@ -6,9 +6,9 @@ body{font-size:12px;-webkit-touch-callout: none;-webkit-user-select: none;-moz-u
 .form-control { background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 3px;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s} 
 .form-control:focus {border-color: #66afe9;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)}
 
-.main{position:relative;width:1350px; height:623px; margin:10px auto;overflow:auto;background:#fff;}
+.main{position:relative;width:1618px; height:623px; margin:10px auto;overflow:auto;background:#fff;}
 
-.left{width:65%; height:100%; display:inline-block;box-sizing:border-box; }
+.left{width:46%; height:100%; display:inline-block;box-sizing:border-box; }
  
 .menu{border-bottom:1px solid #CCC; background:#efefef; font-size:0px;height:45px;margin-top:-45px;}
 .menu a{display:inline-block;padding:4px 15px; text-align:center; text-decoration:none; margin-top:8px; margin-left:10px; cursor:pointer;font-size:14px; border-radius:10px;border:1px solid #dddddd; background:#FFF;color:#000;} 
@@ -88,7 +88,7 @@ body{font-size:12px;-webkit-touch-callout: none;-webkit-user-select: none;-moz-u
 .btnframe img{width:16px;height:16px;}
         
 .ml10{margin-left:10px;}
-.right{font-size:14px; position:absolute;right:0px;top:0px;width:33%;padding:10px; background:#f7f7f7}
+.right{font-size:14px; position:absolute;right:0px;top:0px;width:50%;padding:10px; border:1px solid #999;}
 .screenshot{text-align:center;margin-top:10px;}
 .screenshot img{width:252px;height:155px;border: 1px solid #FFF;border-radius: 5px;box-shadow: 0px 0px 5px rgba(0,0,0,.3);overflow: hidden;}
 .imginfo{width:100%;padding:5px 0px;}   
@@ -98,13 +98,13 @@ body{font-size:12px;-webkit-touch-callout: none;-webkit-user-select: none;-moz-u
 .imginfo .txt-max{display:inline-block;height:24px;width:330px;font-size:12px;padding:0 2px; margin-top:5px;}  
 .imginfo .txt-textarea{display:inline-block;width:100%;font-size:12px;padding:0 2px; margin-top:5px;}  
 .btncommon{padding:5px 30px;border-radius:5px;margin-right:5px; color:#FFF;cursor:pointer;text-shadow:0px 1px 0px rgba(0,0,0,.5);}
-.assetsInfo{height:200px;overflow-y:auto;background: #eee;border-radius: 5px;padding: 5px;position:relative;text-shadow:0px 1px 0px rgba(255,255,255,.5);} 
-.assetsInfo p{margin:10px 0px;text-align:left;}
+.assetsInfo{overflow-y:auto;background: #eee;border-radius: 5px;padding: 5px;position:relative;text-shadow:0px 1px 0px rgba(255,255,255,.5);} 
+.assetsInfo p{margin:10px 0px;text-align:left; line-height: 30px}
 .assetsInfo select{display:inline-block;margin-right:10px;height:26px; vertical-align:top;width:80px;}
 .assetsInfo .add,.assetsInfo .del,.creat-grouping-f .add{display:inline-block;width:22px;height:22px;cursor:pointer;background-size:22px 22px; vertical-align:top;margin-top:2px;margin-left:10px;}
 .assetsInfo .add,.creat-grouping-f .add{background:url(../img/add.png);right:-30px;}
 .assetsInfo .del{background:url(../img/del.png);right:-60px;}
-.assetsInfo span,.creat-grouping-f span{display:inline-block;height:26px; line-height:26px; vertical-align:top;}
+.assetsInfo span,.creat-grouping-f span{display:inline-block;height:26px; line-height:26px; vertical-align:top; margin:0 5px;}
 .assetsInfo input,.creat-grouping-f input，{display:inline-block;width:120px;height:24px; vertical-align:top;padding:0 2px;}
 .assetsInfo div,.creat-grouping-f div{position:absolute;top:26px;left:200px;width:130px;border:1px solid #ccc;background:#FFF;display:none;height:100px; overflow-y:auto;overflow-x:hidden;border-radius:5px;}
 .assetsInfo div a,.creat-grouping-f a{display:block;height:24px;line-height:24px;text-indent:10px;cursor:pointer;overflow:hidden;}
@@ -142,12 +142,12 @@ body{font-size:12px;-webkit-touch-callout: none;-webkit-user-select: none;-moz-u
 .btndel{color:#000;display:inline-block;background:#f6b911;padding:5px 5px;border-radius:5px;cursor:pointer; text-decoration:none;margin:0px 2px;}
 .btnupdate:hover,.btndel:hover{color:#FFF;}
 
-
+/*截屏分组*/
 .creat-grouping-f{
 	padding: 10px;
     background: #fff;
     border-radius: 5px;
-    width: 811px;
+    width: 84%;
 }
 .grouping-box{ height: 623px; overflow-y:auto;  }
 .grouping-box-item{ background:#ededed; margin-bottom: 20px;padding: 0 10px 10px 10px; border:1px solid #999;  }
@@ -159,3 +159,11 @@ body{font-size:12px;-webkit-touch-callout: none;-webkit-user-select: none;-moz-u
 dl.screenshot-item dt{ padding-bottom: 5px;border-bottom: 1px solid #ccc; }
 dl.screenshot-item  img{ margin-top: 5px; }
 dl.screenshot-item{ margin-right: 10px; margin-bottom: 10px; }
+
+.main.active #panelLeft{width: 97%;}
+.main.active .bar-panel{background:url(../img/left_arrow.png); }
+#panelSwitch{width: 32px; height: 100%; display: inline-block; position: relative;vertical-align: top; cursor: pointer; }
+.bar-panel{ width: 32px; height: 32px; position: absolute; top:50%; left: 0; background:url(../img/right_arrow.png); text-indent: -999em;}
+.panel-title{ font-weight:bold; font-size: 16px; margin-bottom: 20px; }
+.btn-del-group{ float: right;display: block; font-size: 16px; text-decoration: underline; color: blue }
+.ungroup {background: none;border: 0;}
