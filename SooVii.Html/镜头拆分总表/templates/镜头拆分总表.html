@@ -1,0 +1,164 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href="../static/css/common.css?t=12" rel="stylesheet"/>
+
+</head>
+<body>
+<div id="box">
+    <div id="top">
+        <h1 class="logo"></h1>
+
+        <div class="object">
+            <b>TMZ</b>
+            <a>切换项目</a>
+        </div>
+        <div class="menu-container">
+            <div id="menu" class="select">
+                <p>剧本拆分列表</p>
+
+                <div>
+                    <a>预算</a>
+                    <a>日历</a>
+                    <a>进度</a>
+                    <a>项目管理</a>
+                    <a>用户管理</a>
+                    <a>表格管理</a>
+                </div>
+            </div>
+            <div class="msg">
+                <a id="msg"><i>0</i></a>
+
+                <div>
+                    <span id="close-msg"></span>
+
+                    <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+
+                    <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+
+                    <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+
+                    <p>09:00:00 AM 编号：00001 剧本有更新，请您审核！</p>
+                </div>
+            </div>
+            <div class="user"><span>您好，administrator</span></div>
+            <div id="setting" class="setting">
+                <span></span>
+
+                <div>
+                    <a>修改密码</a>
+                    <a>系统管理</a>
+                    <a>退出登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="tabfix">
+
+        <!-- 顺场景表 -->
+<div class="split-total-box boxsizing">
+            
+            <div class="split-total-data-filter">
+
+                <button id="" class="btn ls">编辑</button>
+                <button class="btn ls" onclick="exportExcel('tableExcel')">导出</button>
+          </div>
+            <div id="total-data" class="total-data">
+                <table id="tableFCExcel" cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                    <tr class="total-data-head" id="th">
+                        <td>序号<br>No.</td>
+                        <td>集<br>Set</td>
+                        <td>场SeqNo</td>
+                        <td>媒体编号<br>
+						Shot Code-Client
+						</td>
+                        <td>镜头号-SOOVIIShot Code-<br>
+                        SOOVII</td>
+                        <td>镜头截图<br>
+                        Thumbnail</td>
+                        <td>镜头运动<br>
+                        Camera Move</td>
+                        <td>景别<br>
+                        Shooting Scale</td>
+                        <td>总帧数<br>
+                        Frame</td>
+                        <td>当前帧<br>
+                        Current Frame</td>
+                        <td>场景<br>
+                        Location</td>
+                        <td>镜头描述<br>
+                        Description</td>
+                        <td>特效需求<br>
+                        VFX Requirements</td>
+                        <td>图片<br>
+                        Picture</td>
+                    </tr>
+                    <tr class="total-data-body">
+                    	<td>1</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>A01</td>
+                        <td>0010</td>
+                        <td></td>
+						<td>定</td>
+                        <td>近景</td>
+                        <td>1000</td>
+						<td>230</td>
+                        <td></td>
+                        <td>测试</td>
+						<td>A：CG猫</td>
+						<td></td>                     
+                    </tr>
+                   
+                    
+  				</tbody>
+                </table>
+            </div>
+      </div>
+  </div>
+
+    <div id="footer">© Copyright 2017 首汇焦点</div>
+</div>
+<script src="../static/js/jquery-2.1.0.min.js"></script>
+<script src="../static/js/main.js"></script>
+<script src="../static/js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+        
+            //tab 切换
+            var $li = $('#tab li');
+            var $cont = $('#content .split-total-box');
+                        
+            $li.click(function(){
+                var $this = $(this);
+                var $no = $this.index();
+                $li.removeClass();
+                $this.addClass('current');
+                $cont.css('display','none');
+                $cont.eq($no).css('display','block');
+            })
+
+            //表头固定，横向可拉动
+            $("#total-data").height( $("#total-data").height()-$("#th").height() );
+            $(window).resize(function() {
+               $("#total-data").removeAttr("style");
+               $("#total-data").height( $("#total-data").height()-$("#th").height() );
+            });
+
+            $('#total-data').on('scroll',function(){ 
+                $("#th").css("top",$('#total-data').scrollTop())
+            });
+            
+    });
+ 
+
+
+</script>
+</body>
+</html>

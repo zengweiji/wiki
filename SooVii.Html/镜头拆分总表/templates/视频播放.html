@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../static/js/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../static/css/css.css?t=1" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+
+            <div class="menu-container">
+              
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="content" class="sh-main veiw-videoplay">
+            <div class="sh-head"><span class="sh-tit">视频播放列表</span></div>
+                <div id="shMain">
+                    <div id="shLeft">
+
+                        <!--播放器-->
+                        <div class="player-wrap">
+                            <div class="video-box">
+                                <video width="100%" height="310" >
+                                    <source src="" ></source>
+                                </video>
+                                <div id="content-right-menu" class="content-right" style="right: -300px;">
+                                    <a id="tab" class="tab" name="off"><img src="../static/img/tab.png"><span>列表</span></a>
+                                    <div id="list" class="list">
+
+                                        <div class="obj"><em></em><a href="#">CDB_12_001_0010_demo.mov</a></div>
+                                        <div class="play"><em></em><a href="#">CDB_12_001_0020_demo.mov</a></div>
+                                        <div class="play"><em></em><a href="#">CDB_12_001_0020_demo.mov</a></div>
+                                        <div class="play"><em></em><a href="#">CDB_12_001_0020_demo.mov</a></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="play-bar">
+                                <span class="s-time lb">00:00</span>
+                                <div class="play-progress lb" id="progressbar"></div>
+                                <span class="e-time lb">00:00</span>
+                            </div>
+                            <div class="group-playbtn">
+                                <div class="paly-controller">
+                                    <span class="gloop lb"></span>
+                                    <span class="gback lb"></span>
+                                    <span class="gplay lb"></span>
+                                    <span class="ggo lb"></span>
+                                    <span class="gprevious lb btn">上一个</span>
+                                    <span class="gnext lb btn">下一个</span>
+                                    <span class="gsound lb"></span>
+                                    <span class="gsound-slider lb" id="slider"></span>
+                                </div>
+
+                                <span class="lb btn-screenshot">截屏</span>
+                            </div>
+                            <div class="player-speedset">
+                                <span class="speedset-field">FPS:</span>
+                                <a href="javascript:;" class="lb">逐帧</a>
+                                <a href="javascript:;" class="lb">默认</a>
+                                <a href="javascript:;" class="lb">双倍速</a>
+                                <span class="speedset-field">总帧数:</span>
+                                <a href="javascript:;" class="lb">逐帧</a>
+                                <a href="javascript:;" class="lb">默认</a>
+                                <a href="javascript:;" class="lb">双倍速</a>
+                                <span class="speedset-field">切换帧数：</span>
+                                <a class="btn-frame lb" href="javascript:;">-</a>
+                                <input type="text"  value="" class="frames-num">
+                                <a class="btn-frame lb" href="javascript:;">+</a>
+                                <span><button class="btn" id="goframe">确定</button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shRight">
+                        <div class="lens-editbox">
+                            <div class="lens-head">
+                                <span class="lens-img"></span>
+                            </div>
+                            <div class="lens-form-body">
+
+                                <div class="lens-form-row col4">
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">集:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">场数:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">镜头号:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">帧数:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+                                </div>
+
+                                <div class="lens-form-row col3">
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">媒体编号:</span>
+                                        <input type="text" class="wmid-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">镜头难度:</span>
+                                        <input type="text" class="wmid-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">场景:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+
+                                </div>
+
+                                <div class="lens-form-row col3">
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">镜头运动:</span>
+                                        <select class="wmin-select">
+                                            <option value="">定</option>
+                                            <option value="">动</option>
+                                        </select>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">镜头优先级:</span>
+                                        <select class="wmin-select">
+                                            <option value="">定</option>
+                                            <option value="">动</option>
+                                        </select>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">景别:</span>
+                                        <input type="text" class="wmid-input"/>
+                                    </lable>
+
+                                </div>
+                                <div class="lens-form-row">
+                                    <lable class="lens-row-item" style="width: 100%">
+                                        <span class="lens-row-field" style="width:60px;">镜头描述:</span>
+                                        <input type="text" class="" style="width: 80%"/>
+                                    </lable>
+                                </div>
+                                <div class="lens-form-row">
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">特效需求:</span>
+                                        <textarea name="" id=""  rows="4" cols="60" class="lens-row-textarea"></textarea>
+                                    </lable>
+                                </div>
+
+                                <div class="lens-form-row col5 js-effectsItems">
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">特效类型:</span>
+                                        <select class="wmin-select">
+                                            <option value="">定</option>
+                                            <option value="">动</option>
+                                        </select>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">特效名称:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">特效难度:</span>
+                                        <select class="wmin-select">
+                                            <option value="">定</option>
+                                            <option value="">动</option>
+                                        </select>
+                                    </lable>
+                                    <lable class="lens-row-item">
+                                        <span class="lens-row-field">Manday:</span>
+                                        <input type="text" class="wmin-input"/>
+                                    </lable>
+                                    <lable class="lens-row-item js-effectsItems">
+                                        <button class="btnaddgray"></button>
+                                        <!-- <button class="btnsubgray"></button>-->
+                                    </lable>
+                                </div>
+
+                            </div>
+                            <div class="lens-btn-wrap">
+                                <button class="btn">保存</button>
+                                <button class="btn">取消</button>
+                                <button class="btn fens">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+<script src="../static/js/jquery-2.1.0.min.js"></script>
+<script src="../static/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../static/js/player_custom.js"></script>
+    <script>
+        $(function() {
+
+
+            $( "#progressbar" ).slider({
+                range: "min",
+                value: 0,
+                //min: 1,
+                // max: 700,
+                slide: function( event, ui ) {
+                   // $( "#amount" ).val( "$" + ui.value );
+                }
+            });
+            //音量
+            $( "#slider" ).slider({
+                range: "min",
+            });
+            //播放列表
+            $("#tab").click(function() {
+                var obj = $(this);
+                var right=obj.attr("name") == "off"?"0px":"-300px";
+                var value=obj.attr("name") == "off"?"on":"off";
+                $("#content-right-menu").animate({ right: right }, 300, function () {
+                    obj.attr("name",value);
+                });
+            })
+
+            //截图标记
+            $(".btn-screenshot").on('click',function(){
+                var posLeft = $(".ui-slider-handle").css("left");
+                var sign = ['<span class="sh-sign" style="left:'+posLeft+'"></span>'].join("");
+                $(".play-progress").append(sign);
+
+            })
+            //添加
+            $(document).on('click', '.js-effectsItems button', function () {
+
+                var a=$(this);
+                if (a.attr("class")=="btnaddgray") {
+                    a.hide();
+                    var str=['<div class="lens-form-row col5 js-effectsItems">',
+                        '                                   <lable class="lens-row-item">',
+                        '                                       <span class="lens-row-field">特效类型:</span>',
+                        '                                       <select class="wmin-select">',
+                        '                                           <option value="">定</option>',
+                        '                                           <option value="">动</option>',
+                        '                                       </select>',
+                        '                                   </lable>',
+                        '                                   <lable class="lens-row-item">',
+                        '                                       <span class="lens-row-field">特效名称:</span>',
+                        '                                       <input type="text" class="wmin-input">',
+                        '                                   </lable>',
+                        '                                   <lable class="lens-row-item">',
+                        '                                       <span class="lens-row-field">特效难度:</span>',
+                        '                                       <select class="wmin-select">',
+                        '                                           <option value="">定</option>',
+                        '                                           <option value="">动</option>',
+                        '                                       </select>',
+                        '                                   </lable>',
+                        '                                   <lable class="lens-row-item">',
+                        '                                       <span class="lens-row-field">Manday:</span>',
+                        '                                       <input type="text" class="wmin-input">',
+                        '                                   </lable>',
+                        '                                   <lable class="lens-row-item">',
+                        '                                       <button class="btnaddgray"></button>',
+                        '                                       <button class="btnsubgray"></button>',
+                        '                                   </lable>',
+                        ' </div>'].join("");
+                    $(".lens-form-body").append(str);
+                }else {
+
+                    var p= a.parent().parent();
+                    if (p.next().length==0) {
+                        p.prev().find(".js-effectsItems .btnaddgray").show();
+                    }
+                    p.remove();
+                }
+            })
+
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" /> 
+    <link href="../static/css/common.css?t=1" rel="stylesheet" />
+
+
+    <style>
+        .item{width:100%;height:30px; font-size:14px; vertical-align:middle; display:table; height:30px;}
+        .item .filename{display:inline-block; line-height:30px;}
+        .item .loading{display:inline-block;vertical-align:top;}
+        .item .loading div{width:200px;border:1px solid #dddcdc; margin-top:10px; padding:1px; height:8px;  border-radius:5px;display:inline-block;}
+        .item .loading p{width:0px;height:8px;border-radius:5px; background:#41D041;transition:all .6s ease;} 
+        .item .tips{display:inline-block;}
+        .item .tips{font-size:10px;font-family:Arial;} 
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+
+            <div class="menu-container">
+              
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="content">
+            <div class="story-main">
+                <div class="story-form-container">
+
+                    <div>
+                        <button id="btnCreate" class="btn ls">创建项目</button>
+         
+                    </div>
+                </div>
+                <div class="data-container">
+                    <table cellpadding='0' cellspacing='0' border='0' class="tb-head">
+                        <tr>
+                            <td width="15%">项目名称</td>
+                            <td width="10%">项目简写</td>
+                            <td width="10%">项目类别</td>
+                            <td width="15%">集数</td>
+                            <td width="15%">创建时间</td>
+                            <td >创建人</td>
+                            <td width="10%">状态</td>
+                            <td width="15%">操作</td>
+        
+                        </tr>
+                    </table>
+                    <div class="scroll">
+                        <table cellpadding='0' cellspacing='0' border='0' class="tb-body">
+                           
+
+                            <tr>
+                                <td width="15%">铁木真</td>
+                                <td width="10%">TMZ</td>
+                                <td width="10%">电视剧</td>
+                                <td width="15%">2016/02/12</td>
+                                <td width="15%">LiLingDa</td>
+                                <td >LiLingDa</td>
+                                <td width="10%"><input type="radio"  name="name" value="">启用  <input type="radio" name="name" value="">不启用</td>
+                                <td width="15%"><a href="javascript:;" onclick="" class="js-editUserInfo">编辑</a></td>
+                            </tr> 
+                            <tr>
+                                <td width="15%">铁木真</td>
+                                <td width="10%">TMZ</td>
+                                <td width="10%">电视剧</td>
+                                <td width="15%">2016/02/12</td>
+                                <td width="15%">LiLingDa</td>
+                                <td >LiLingDa</td>
+                                <td width="10%"><input type="radio"  name="name" value="">启用  <input type="radio" name="name" value="">不启用</td>
+                                <td width="15%"><a href="javascript:;" onclick="" class="js-editUserInfo">编辑</a></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div id="createProject" style="display:none;">
+                <div class="col-table">
+                         
+                    <div><span class="col-name">项目名称</span><span class="col-r"><input class="inputbox form-control" type="text" id="txtfind" name="name" value="" class="form-control" ></span></div>
+                    <div><span class="col-name">项目简写</span><span class="col-r"><input class="inputbox form-control"  type="text" id="txtfind" name="name" value="" class="form-control" ></span></div>
+                    <div><span class="col-name">项目类型</span>
+                         <span class="col-r">
+                            <select class="form-control">
+                              <option value="value">项目协调</option>
+                            </select>
+                         </span>   
+                    </div>
+                    <div><span class="col-name">创建时间</span><span class="col-r"><input class="inputbox form-control"  type="text" id="txtfind" name="name" value="" class="form-control" ></span></div>
+                    <div><span class="col-name">项目集数</span><span class="col-r"><input class="inputbox form-control"  type="text" id="txtfind" name="name" value="" class="form-control" ></span></div>
+                    <div><span class="col-name">项目成员</span>
+                        <span class="col-r">
+                               <p class="check-item"><input type="checkbox" name="name" value="">李达</p>
+                               <p class="check-item"><input type="checkbox" name="name" value="">王健康</p>
+                               <p class="check-item"><input type="checkbox" name="name" value="">林俊杰</p>
+                               <p class="check-item"><input type="checkbox" name="name" value="">吴莹莹</p>
+                        </span>
+                    </div>
+
+                    <div class="mt10">
+                         <button class="btn ls">创建项目</button>
+                         <button class="btn hs" onclick="$dialog.hideWindow('createProject')">取消</button>
+                    </div>
+                </div>
+        </div>  
+
+        <div id="footer">© Copyright 2017 首汇焦点</div>
+    </div>
+<script src="../static/js/jquery-2.1.0.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script type="text/javascript">
+
+$(function () {
+
+    $("#btnCreate").click(function () {
+
+        $dialog.window("createProject", $("#createProject"), function (tag) {
+        });
+    })
+});
+
+</script>
+</body>
+</html>

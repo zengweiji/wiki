@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../static/js/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../static/css/css.css?t=1" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <h1 class="logo"></h1>
+
+            <div class="menu-container">
+              
+                <div class="user"><span>您好，administrator</span></div>
+                <div id="setting" class="setting">
+                    <span></span>
+                    <div>
+                        <a>修改密码</a>
+                        <a>系统管理</a>
+                        <a>退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="content" class="sh-main">
+            <div class="sh-head"><span class="sh-tit">截图分组图片列表</span></div>
+            <div id="shLeft">
+                <div class="l-group-bar">
+                    <p class="group-bar-row">
+                        <lable class="bar-row-item">
+                            <span class="r-item-name">项目：</span>
+                            <select name="" id="" class="r-item-select">
+                                <option value="">TMZ</option>
+                                <option value="">kk</option>
+                            </select>
+                        </lable>
+                        <lable class="bar-row-item">
+                            <span class="r-item-name">集：</span>
+                            <select name="" id="" class="r-item-select">
+                                <option value="">TMZ</option>
+                                <option value="">kk</option>
+                            </select>
+                        </lable>
+                        <lable class="bar-row-item">
+                            <span class="r-item-name">场：</span>
+                            <select name="" id="" class="r-item-select">
+                                <option value="">TMZ</option>
+                                <option value="">kk</option>
+                            </select>
+                        </lable>
+                        <lable class="bar-row-item">
+                            <span class="r-item-name">文件名：</span>
+                            <input type="text" class="r-item-text"/>
+                        </lable>
+                        <button class="btn">搜索</button>
+                    </p>
+                    <p class="group-bar-row">
+                        <lable class="bar-row-item">
+                            <span class="r-item-name">分组：</span>
+                            <select name="" id="" class="r-item-select">
+                                <option value="">TMZ</option>
+                                <option value="">kk</option>
+                            </select>
+                        </lable>
+                        <lable class="bar-row-item">
+                            <span class="r-item-name">标签：</span>
+                            <input type="text" class="r-item-text"/>
+                        </lable>
+                        <button class="btnaddgray"></button>
+                    </p>
+                </div>
+                <!--播放器-->
+                <div class="player-wrap">
+                    <div class="video-box">
+                        <video width="100%" height="310" >
+                            <source src="" ></source>
+                        </video>
+                    </div>
+
+                    <div class="play-bar">
+                        <span class="s-time lb">00:00</span>
+                        <div class="play-progress lb" id="progressbar"></div>
+                        <span class="e-time lb">00:00</span>
+                    </div>
+                    <div class="group-playbtn">
+                        <div class="paly-controller">
+                            <span class="gback lb"></span>
+                            <span class="gplay lb"></span>
+                            <span class="ggo lb"></span>
+                            <span class="gprevious lb btn">上一个</span>
+                            <span class="gnext lb btn">下一个</span>
+                            <span class="gsound lb"></span>
+                            <span class="gsound-slider lb" id="slider"></span>
+                        </div>
+                        <div class="player-edit">
+                            <span class="playe-loop lb"></span>
+                            <span class="playe-edit lb"></span>
+                            <span class="playe-del lb"></span>
+                            <span class="playe-ok lb"></span>
+                        </div>
+                        <span class="lb btn-screenshot">截屏</span>
+                    </div>
+                    <div class="player-speedset">
+                        <span class="speedset-field">FPS:</span>
+                        <a href="javascript:;" class="lb">逐帧</a>
+                        <a href="javascript:;" class="lb">默认</a>
+                        <a href="javascript:;" class="lb">双倍速</a>
+                        <span class="speedset-field">总帧数:</span>
+                        <a href="javascript:;" class="lb">逐帧</a>
+                        <a href="javascript:;" class="lb">默认</a>
+                        <a href="javascript:;" class="lb">双倍速</a>
+                        <span class="speedset-field">切换帧数：</span>
+                        <a class="btn-frame lb" href="javascript:;">-</a>
+                        <input type="text"  value="" class="frames-num">
+                        <a class="btn-frame lb" href="javascript:;">+</a>
+                        <span><button class="btn" id="goframe">确定</button></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="shMid">
+                <div class="group-content">
+
+                    <div class="group-item">
+                        <div class="group-head">
+                            <span class="group-name lb">A组</span>
+                            <lable class="group-tag lb">考拉</lable>
+                        </div>
+                        <ul class="group-body group-0">
+
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group-item">
+                        <div class="group-head">
+                            <span class="group-name">B组</span>
+                            <lable class="group-tag">企鹅</lable>
+                        </div>
+                        <ul class="group-body group-1">
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">2name_1</span>
+                            </li>
+
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">2name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">2name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">2name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">2name_1</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--未分组-->
+                    <div class="group-item ungroup">
+                        <div class="group-head">
+                            <span class="group-name">未分组</span>
+                        </div>
+                        <ul class="group-body group-2">
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                            <li class="group-li">
+                                <input type="checkbox" name="" class="groupli-checkbox"/>
+                                <img src="../static/img/ss.jpg" alt=""/>
+                                <span class="sh-name lb">1name_1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="shRight">
+                       <div class="lens-editbox">
+                           <div class="lens-head">
+                               <span class="lens-img"></span>
+                           </div>
+                           <div class="lens-form-body">
+
+                               <div class="lens-form-row col4">
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">集:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">场数:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">镜头号:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">帧数:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+                               </div>
+
+                               <div class="lens-form-row col3">
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">媒体编号:</span>
+                                       <input type="text" class="wmid-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">镜头难度:</span>
+                                       <input type="text" class="wmid-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">场景:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+
+                               </div>
+
+                               <div class="lens-form-row col3">
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">镜头运动:</span>
+                                       <select class="wmin-select">
+                                           <option value="">定</option>
+                                           <option value="">动</option>
+                                       </select>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">镜头优先级:</span>
+                                       <select class="wmin-select">
+                                           <option value="">定</option>
+                                           <option value="">动</option>
+                                       </select>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">景别:</span>
+                                       <input type="text" class="wmid-input"/>
+                                   </lable>
+
+                               </div>
+                               <div class="lens-form-row">
+                                   <lable class="lens-row-item" style="width: 100%">
+                                       <span class="lens-row-field" style="width:60px;">镜头描述:</span>
+                                       <input type="text" class="" style="width: 80%"/>
+                                   </lable>
+                               </div>
+                               <div class="lens-form-row">
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">特效需求:</span>
+                                       <textarea name="" id=""  rows="4" cols="60" class="lens-row-textarea"></textarea>
+                                   </lable>
+                               </div>
+
+                               <div class="lens-form-row col5">
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">特效类型:</span>
+                                       <select class="wmin-select">
+                                           <option value="">定</option>
+                                           <option value="">动</option>
+                                       </select>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">特效名称:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">特效难度:</span>
+                                       <select class="wmin-select">
+                                           <option value="">定</option>
+                                           <option value="">动</option>
+                                       </select>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <span class="lens-row-field">Manday:</span>
+                                       <input type="text" class="wmin-input"/>
+                                   </lable>
+                                   <lable class="lens-row-item">
+                                       <button class="btnaddgray"></button>
+                                       <button class="btnsubgray"></button>
+                                   </lable>
+                               </div>
+
+                           </div>
+                           <div class="lens-btn-wrap">
+                               <button class="btn">保存</button>
+                               <button class="btn">取消</button>
+                               <button class="btn fens">删除</button>
+                           </div>
+                       </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<script src="../static/js/jquery-2.1.0.min.js"></script>
+<script src="../static/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../static/js/group.js"></script>
+<script >
+        $(function() {
+            $( "#progressbar" ).slider({
+                range: "min",
+                value: 0,
+                //min: 1,
+                // max: 700,
+                slide: function( event, ui ) {
+                   // $( "#amount" ).val( "$" + ui.value );
+                }
+            });
+
+            $( "#slider" ).slider({
+                range: "min",
+            });
+
+        });
+    </script>
+
+</body>
+</html>
